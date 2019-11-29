@@ -4,8 +4,6 @@ package org.tartarus.snowball.ext;
 
 import org.tartarus.snowball.Among;
 
-import org.tartarus.snowball.SnowballProgram;
-
 /**
  * This class implements the stemming algorithm defined by a snowball script.
  * <p>
@@ -54,6 +52,7 @@ private final static Among a_0[] = {
     new Among("\u066A", -1, 1),
     new Among("\u066B", -1, 1),
     new Among("\u066C", -1, 1),
+    new Among("\u06CC", -1, 47),
     new Among("\uFE80", -1, 12),
     new Among("\uFE81", -1, 16),
     new Among("\uFE82", -1, 16),
@@ -212,23 +211,6 @@ private final static Among a_4[] = {
 };
 
 private final static Among a_5[] = {
-    new Among("\u0627", -1, 1),
-    new Among("\u062A", -1, 1),
-    new Among("\u0646", -1, 1),
-    new Among("\u064A", -1, 1)
-};
-
-private final static Among a_6[] = {
-    new Among("\u0627\u0646", -1, 1),
-    new Among("\u0645\u0646", -1, 1)
-};
-
-private final static Among a_7[] = {
-    new Among("\u0627\u0633\u062A", -1, 1),
-    new Among("\u0645\u0633\u062A", -1, 1)
-};
-
-private final static Among a_8[] = {
     new Among("\u0623\u0622", -1, 2),
     new Among("\u0623\u0623", -1, 1),
     new Among("\u0623\u0624", -1, 1),
@@ -236,24 +218,24 @@ private final static Among a_8[] = {
     new Among("\u0623\u0627", -1, 3)
 };
 
-private final static Among a_9[] = {
+private final static Among a_6[] = {
     new Among("\u0641\u0627\u0644", -1, 1),
     new Among("\u0648\u0627\u0644", -1, 1)
 };
 
-private final static Among a_10[] = {
+private final static Among a_7[] = {
     new Among("\u0641", -1, 1),
     new Among("\u0648", -1, 1)
 };
 
-private final static Among a_11[] = {
+private final static Among a_8[] = {
     new Among("\u0627\u0644", -1, 2),
     new Among("\u0628\u0627\u0644", -1, 1),
     new Among("\u0643\u0627\u0644", -1, 1),
     new Among("\u0644\u0644", -1, 2)
 };
 
-private final static Among a_12[] = {
+private final static Among a_9[] = {
     new Among("\u0628", -1, 1),
     new Among("\u0628\u0628", 0, 3),
     new Among("\u0643", -1, 2),
@@ -261,29 +243,24 @@ private final static Among a_12[] = {
     new Among("\u0644", -1, 2)
 };
 
-private final static Among a_13[] = {
+private final static Among a_10[] = {
+    new Among("\u0628", -1, 1)
+};
+
+private final static Among a_11[] = {
     new Among("\u0633\u0623", -1, 4),
     new Among("\u0633\u062A", -1, 2),
     new Among("\u0633\u0646", -1, 3),
     new Among("\u0633\u064A", -1, 1)
 };
 
-private final static Among a_14[] = {
+private final static Among a_12[] = {
     new Among("\u062A\u0633\u062A", -1, 1),
     new Among("\u0646\u0633\u062A", -1, 1),
     new Among("\u064A\u0633\u062A", -1, 1)
 };
 
-private final static Among a_15[] = {
-    new Among("\u0627", -1, 1)
-};
-
-private final static Among a_16[] = {
-    new Among("\u0627\u0621", -1, 1),
-    new Among("\u0627\u0646", -1, 1)
-};
-
-private final static Among a_17[] = {
+private final static Among a_13[] = {
     new Among("\u0643\u0645\u0627", -1, 3),
     new Among("\u0647\u0645\u0627", -1, 3),
     new Among("\u0646\u0627", -1, 2),
@@ -296,35 +273,35 @@ private final static Among a_17[] = {
     new Among("\u064A", -1, 1)
 };
 
-private final static Among a_18[] = {
+private final static Among a_14[] = {
     new Among("\u0646", -1, 1)
 };
 
-private final static Among a_19[] = {
+private final static Among a_15[] = {
     new Among("\u0627", -1, 1),
     new Among("\u0648", -1, 1),
     new Among("\u064A", -1, 1)
 };
 
-private final static Among a_20[] = {
+private final static Among a_16[] = {
     new Among("\u0627\u062A", -1, 1)
 };
 
-private final static Among a_21[] = {
+private final static Among a_17[] = {
     new Among("\u062A", -1, 1)
 };
 
-private final static Among a_22[] = {
+private final static Among a_18[] = {
     new Among("\u0629", -1, 1),
     new Among("\u062A\u0627\u0646", -1, 2),
     new Among("\u062A\u064A\u0646", -1, 2)
 };
 
-private final static Among a_23[] = {
+private final static Among a_19[] = {
     new Among("\u064A", -1, 1)
 };
 
-private final static Among a_24[] = {
+private final static Among a_20[] = {
     new Among("\u0643\u0645\u0627", -1, 3),
     new Among("\u0647\u0645\u0627", -1, 3),
     new Among("\u0646\u0627", -1, 2),
@@ -339,7 +316,7 @@ private final static Among a_24[] = {
     new Among("\u0646\u064A", -1, 2)
 };
 
-private final static Among a_25[] = {
+private final static Among a_21[] = {
     new Among("\u0627", -1, 1),
     new Among("\u062A\u0627", 0, 2),
     new Among("\u062A\u0645\u0627", 0, 4),
@@ -353,242 +330,214 @@ private final static Among a_25[] = {
     new Among("\u064A", -1, 1)
 };
 
-private final static Among a_26[] = {
+private final static Among a_22[] = {
     new Among("\u0648\u0627", -1, 1),
     new Among("\u062A\u0645", -1, 1)
 };
 
-private final static Among a_27[] = {
+private final static Among a_23[] = {
     new Among("\u0648", -1, 1),
     new Among("\u062A\u0645\u0648", 0, 2)
 };
 
-private final static Among a_28[] = {
+private final static Among a_24[] = {
     new Among("\u0649", -1, 1)
 };
 
-private static final char g_all_letters[] = {255, 255, 15, 252, 11 };
-
-private static final char g_v[] = {1, 0, 0, 0, 10 };
-
-private static final char g_g1[] = {9, 0, 0, 64, 8 };
-
-private static final char g_g2[] = {9 };
-
-private static final char g_g3[] = {9, 0, 0, 64 };
-
-private static final char g_g4[] = {1, 0, 0, 0, 8 };
-
-private boolean B_case9;
-private boolean B_case8;
-private boolean B_case7;
-private boolean B_case6;
-private boolean B_case5;
-private boolean B_case4;
-private boolean B_case3;
-private boolean B_case2;
-private boolean B_case1;
-private boolean B_root_found;
-private boolean B_v_found;
-private boolean B_alef_found;
-private boolean B_meem_found;
 private boolean B_is_defined;
 private boolean B_is_verb;
 private boolean B_is_noun;
-private java.lang.StringBuilder S_ch1 = new java.lang.StringBuilder();
-private java.lang.StringBuilder S_ch = new java.lang.StringBuilder();
-private java.lang.StringBuilder S_root_test4 = new java.lang.StringBuilder();
-private java.lang.StringBuilder S_root_test3 = new java.lang.StringBuilder();
-private java.lang.StringBuilder S_root_test2 = new java.lang.StringBuilder();
-private java.lang.StringBuilder S_root_test1 = new java.lang.StringBuilder();
-private java.lang.StringBuilder S_root_test = new java.lang.StringBuilder();
-private java.lang.StringBuilder S_root = new java.lang.StringBuilder();
-private java.lang.StringBuilder S_stemmed_word = new java.lang.StringBuilder();
-private java.lang.StringBuilder S_lam1 = new java.lang.StringBuilder();
-private java.lang.StringBuilder S_ain = new java.lang.StringBuilder();
-private java.lang.StringBuilder S_fa = new java.lang.StringBuilder();
-private int I_word_len;
 
 
 private boolean r_Normalize_pre() {
     int among_var;
-    for (int v_1 = current.length(); v_1 > 0; v_1--)
-    {
-        lab0: {
+    int v_1 = cursor;
+    lab0: {
+        while(true)
+        {
             int v_2 = cursor;
             lab1: {
-                bra = cursor;
-                among_var = find_among(a_0);
-                if (among_var == 0)
-                {
-                    break lab1;
+                lab2: {
+                    int v_3 = cursor;
+                    lab3: {
+                        bra = cursor;
+                        among_var = find_among(a_0);
+                        if (among_var == 0)
+                        {
+                            break lab3;
+                        }
+                        ket = cursor;
+                        switch (among_var) {
+                            case 1:
+                                slice_del();
+                                break;
+                            case 2:
+                                slice_from("0");
+                                break;
+                            case 3:
+                                slice_from("1");
+                                break;
+                            case 4:
+                                slice_from("2");
+                                break;
+                            case 5:
+                                slice_from("3");
+                                break;
+                            case 6:
+                                slice_from("4");
+                                break;
+                            case 7:
+                                slice_from("5");
+                                break;
+                            case 8:
+                                slice_from("6");
+                                break;
+                            case 9:
+                                slice_from("7");
+                                break;
+                            case 10:
+                                slice_from("8");
+                                break;
+                            case 11:
+                                slice_from("9");
+                                break;
+                            case 12:
+                                slice_from("\u0621");
+                                break;
+                            case 13:
+                                slice_from("\u0623");
+                                break;
+                            case 14:
+                                slice_from("\u0625");
+                                break;
+                            case 15:
+                                slice_from("\u0626");
+                                break;
+                            case 16:
+                                slice_from("\u0622");
+                                break;
+                            case 17:
+                                slice_from("\u0624");
+                                break;
+                            case 18:
+                                slice_from("\u0627");
+                                break;
+                            case 19:
+                                slice_from("\u0628");
+                                break;
+                            case 20:
+                                slice_from("\u0629");
+                                break;
+                            case 21:
+                                slice_from("\u062A");
+                                break;
+                            case 22:
+                                slice_from("\u062B");
+                                break;
+                            case 23:
+                                slice_from("\u062C");
+                                break;
+                            case 24:
+                                slice_from("\u062D");
+                                break;
+                            case 25:
+                                slice_from("\u062E");
+                                break;
+                            case 26:
+                                slice_from("\u062F");
+                                break;
+                            case 27:
+                                slice_from("\u0630");
+                                break;
+                            case 28:
+                                slice_from("\u0631");
+                                break;
+                            case 29:
+                                slice_from("\u0632");
+                                break;
+                            case 30:
+                                slice_from("\u0633");
+                                break;
+                            case 31:
+                                slice_from("\u0634");
+                                break;
+                            case 32:
+                                slice_from("\u0635");
+                                break;
+                            case 33:
+                                slice_from("\u0636");
+                                break;
+                            case 34:
+                                slice_from("\u0637");
+                                break;
+                            case 35:
+                                slice_from("\u0638");
+                                break;
+                            case 36:
+                                slice_from("\u0639");
+                                break;
+                            case 37:
+                                slice_from("\u063A");
+                                break;
+                            case 38:
+                                slice_from("\u0641");
+                                break;
+                            case 39:
+                                slice_from("\u0642");
+                                break;
+                            case 40:
+                                slice_from("\u0643");
+                                break;
+                            case 41:
+                                slice_from("\u0644");
+                                break;
+                            case 42:
+                                slice_from("\u0645");
+                                break;
+                            case 43:
+                                slice_from("\u0646");
+                                break;
+                            case 44:
+                                slice_from("\u0647");
+                                break;
+                            case 45:
+                                slice_from("\u0648");
+                                break;
+                            case 46:
+                                slice_from("\u0649");
+                                break;
+                            case 47:
+                                slice_from("\u064A");
+                                break;
+                            case 48:
+                                slice_from("\u0644\u0627");
+                                break;
+                            case 49:
+                                slice_from("\u0644\u0623");
+                                break;
+                            case 50:
+                                slice_from("\u0644\u0625");
+                                break;
+                            case 51:
+                                slice_from("\u0644\u0622");
+                                break;
+                        }
+                        break lab2;
+                    }
+                    cursor = v_3;
+                    if (cursor >= limit)
+                    {
+                        break lab1;
+                    }
+                    cursor++;
                 }
-                ket = cursor;
-                switch (among_var) {
-                    case 1:
-                        slice_del();
-                        break;
-                    case 2:
-                        slice_from("0");
-                        break;
-                    case 3:
-                        slice_from("1");
-                        break;
-                    case 4:
-                        slice_from("2");
-                        break;
-                    case 5:
-                        slice_from("3");
-                        break;
-                    case 6:
-                        slice_from("4");
-                        break;
-                    case 7:
-                        slice_from("5");
-                        break;
-                    case 8:
-                        slice_from("6");
-                        break;
-                    case 9:
-                        slice_from("7");
-                        break;
-                    case 10:
-                        slice_from("8");
-                        break;
-                    case 11:
-                        slice_from("9");
-                        break;
-                    case 12:
-                        slice_from("\u0621");
-                        break;
-                    case 13:
-                        slice_from("\u0623");
-                        break;
-                    case 14:
-                        slice_from("\u0625");
-                        break;
-                    case 15:
-                        slice_from("\u0626");
-                        break;
-                    case 16:
-                        slice_from("\u0622");
-                        break;
-                    case 17:
-                        slice_from("\u0624");
-                        break;
-                    case 18:
-                        slice_from("\u0627");
-                        break;
-                    case 19:
-                        slice_from("\u0628");
-                        break;
-                    case 20:
-                        slice_from("\u0629");
-                        break;
-                    case 21:
-                        slice_from("\u062A");
-                        break;
-                    case 22:
-                        slice_from("\u062B");
-                        break;
-                    case 23:
-                        slice_from("\u062C");
-                        break;
-                    case 24:
-                        slice_from("\u062D");
-                        break;
-                    case 25:
-                        slice_from("\u062E");
-                        break;
-                    case 26:
-                        slice_from("\u062F");
-                        break;
-                    case 27:
-                        slice_from("\u0630");
-                        break;
-                    case 28:
-                        slice_from("\u0631");
-                        break;
-                    case 29:
-                        slice_from("\u0632");
-                        break;
-                    case 30:
-                        slice_from("\u0633");
-                        break;
-                    case 31:
-                        slice_from("\u0634");
-                        break;
-                    case 32:
-                        slice_from("\u0635");
-                        break;
-                    case 33:
-                        slice_from("\u0636");
-                        break;
-                    case 34:
-                        slice_from("\u0637");
-                        break;
-                    case 35:
-                        slice_from("\u0638");
-                        break;
-                    case 36:
-                        slice_from("\u0639");
-                        break;
-                    case 37:
-                        slice_from("\u063A");
-                        break;
-                    case 38:
-                        slice_from("\u0641");
-                        break;
-                    case 39:
-                        slice_from("\u0642");
-                        break;
-                    case 40:
-                        slice_from("\u0643");
-                        break;
-                    case 41:
-                        slice_from("\u0644");
-                        break;
-                    case 42:
-                        slice_from("\u0645");
-                        break;
-                    case 43:
-                        slice_from("\u0646");
-                        break;
-                    case 44:
-                        slice_from("\u0647");
-                        break;
-                    case 45:
-                        slice_from("\u0648");
-                        break;
-                    case 46:
-                        slice_from("\u0649");
-                        break;
-                    case 47:
-                        slice_from("\u064A");
-                        break;
-                    case 48:
-                        slice_from("\u0644\u0627");
-                        break;
-                    case 49:
-                        slice_from("\u0644\u0623");
-                        break;
-                    case 50:
-                        slice_from("\u0644\u0625");
-                        break;
-                    case 51:
-                        slice_from("\u0644\u0622");
-                        break;
-                }
-                break lab0;
+                continue;
             }
             cursor = v_2;
-            if (cursor >= limit)
-            {
-                return false;
-            }
-            cursor++;
+            break;
         }
     }
+    cursor = v_1;
     return true;
 }
 
@@ -610,38 +559,44 @@ private boolean r_Normalize_post() {
     cursor = v_1;
     int v_2 = cursor;
     lab1: {
-        for (int v_3 = I_word_len; v_3 > 0; v_3--)
+        while(true)
         {
+            int v_3 = cursor;
             lab2: {
-                int v_4 = cursor;
                 lab3: {
-                    bra = cursor;
-                    among_var = find_among(a_2);
-                    if (among_var == 0)
-                    {
+                    int v_4 = cursor;
+                    lab4: {
+                        bra = cursor;
+                        among_var = find_among(a_2);
+                        if (among_var == 0)
+                        {
+                            break lab4;
+                        }
+                        ket = cursor;
+                        switch (among_var) {
+                            case 1:
+                                slice_from("\u0627");
+                                break;
+                            case 2:
+                                slice_from("\u0648");
+                                break;
+                            case 3:
+                                slice_from("\u064A");
+                                break;
+                        }
                         break lab3;
                     }
-                    ket = cursor;
-                    switch (among_var) {
-                        case 1:
-                            slice_from("\u0627");
-                            break;
-                        case 2:
-                            slice_from("\u0648");
-                            break;
-                        case 3:
-                            slice_from("\u064A");
-                            break;
+                    cursor = v_4;
+                    if (cursor >= limit)
+                    {
+                        break lab2;
                     }
-                    break lab2;
+                    cursor++;
                 }
-                cursor = v_4;
-                if (cursor >= limit)
-                {
-                    break lab1;
-                }
-                cursor++;
+                continue;
             }
+            cursor = v_3;
+            break;
         }
     }
     cursor = v_2;
@@ -650,7 +605,6 @@ private boolean r_Normalize_post() {
 
 private boolean r_Checks1() {
     int among_var;
-    I_word_len = current.length();
     bra = cursor;
     among_var = find_among(a_3);
     if (among_var == 0)
@@ -660,7 +614,7 @@ private boolean r_Checks1() {
     ket = cursor;
     switch (among_var) {
         case 1:
-            if (!(I_word_len > 4))
+            if (!(current.length() > 4))
             {
                 return false;
             }
@@ -669,7 +623,7 @@ private boolean r_Checks1() {
             B_is_defined = true;
             break;
         case 2:
-            if (!(I_word_len > 3))
+            if (!(current.length() > 3))
             {
                 return false;
             }
@@ -683,7 +637,6 @@ private boolean r_Checks1() {
 
 private boolean r_Checks2() {
     int among_var;
-    I_word_len = current.length();
     ket = cursor;
     among_var = find_among_b(a_4);
     if (among_var == 0)
@@ -693,7 +646,7 @@ private boolean r_Checks2() {
     bra = cursor;
     switch (among_var) {
         case 1:
-            if (!(I_word_len > 2))
+            if (!(current.length() > 2))
             {
                 return false;
             }
@@ -701,7 +654,7 @@ private boolean r_Checks2() {
             B_is_verb = false;
             break;
         case 2:
-            if (!(I_word_len > 3))
+            if (!(current.length() > 3))
             {
                 return false;
             }
@@ -709,7 +662,7 @@ private boolean r_Checks2() {
             B_is_verb = false;
             break;
         case 3:
-            if (!(I_word_len >= 5))
+            if (!(current.length() >= 5))
             {
                 return false;
             }
@@ -720,871 +673,10 @@ private boolean r_Checks2() {
     return true;
 }
 
-private boolean r_Check_Pattern1() {
-    assign_to(S_root_test);
-    {
-
-        SnowballProgram v_1 = new SnowballProgram(this);
-        current = S_root_test;
-        cursor = 0;
-        limit = current.length();
-        int v_2 = cursor;
-        lab0: {
-            bra = cursor;
-            if (!(eq_s("\u0645")))
-            {
-                break lab0;
-            }
-            ket = cursor;
-            B_meem_found = true;
-        }
-        cursor = v_2;
-        int v_3 = cursor;
-        lab1: {
-            bra = cursor;
-            if (cursor >= limit)
-            {
-                break lab1;
-            }
-            cursor++;
-            ket = cursor;
-            bra = cursor;
-            if (!(eq_s("\u0627")))
-            {
-                break lab1;
-            }
-            ket = cursor;
-            B_alef_found = true;
-        }
-        cursor = v_3;
-        int v_4 = cursor;
-        lab2: {
-            {
-                int c = cursor + 2;
-                if (0 > c || c > limit)
-                {
-                    break lab2;
-                }
-                cursor = c;
-            }
-            bra = cursor;
-            if (!(in_grouping(g_v, 1575, 1610)))
-            {
-                break lab2;
-            }
-            ket = cursor;
-            B_v_found = true;
-        }
-        cursor = v_4;
-        copy_from(v_1);
-    }
-    return true;
-}
-
-private boolean r_Pattern_Step1a() {
-    {
-
-        SnowballProgram v_1 = new SnowballProgram(this);
-        current = S_fa;
-        cursor = 0;
-        limit = current.length();
-        {
-            int c = cursor;
-            insert(cursor, limit, "\u0645");
-            cursor = c;
-        }
-        copy_from(v_1);
-    }
-    {
-        int c = cursor + 2;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_ain);
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_lam1);
-    B_root_found = true;
-    return true;
-}
-
-private boolean r_Pattern_Step1a1() {
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_fa);
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_ain);
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_lam1);
-    B_root_found = true;
-    return true;
-}
-
-private boolean r_Pattern_Step1a2() {
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_fa);
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_ain);
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_lam1);
-    B_root_found = true;
-    return true;
-}
-
-private boolean r_Pattern_Step1b() {
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_fa);
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_ain);
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_lam1);
-    B_root_found = true;
-    return true;
-}
-
-private boolean r_Pattern_Step1c() {
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_fa);
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_ain);
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(out_grouping(g_v, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_lam1);
-    B_root_found = true;
-    return true;
-}
-
-private boolean r_Pattern_Step1c1() {
-    I_word_len = current.length();
-    bra = cursor;
-    if (find_among(a_5) == 0)
-    {
-        return false;
-    }
-    ket = cursor;
-    if (!(I_word_len == 4))
-    {
-        return false;
-    }
-    slice_del();
-    return true;
-}
-
-private boolean r_Checks_Pattern2() {
-    assign_to(S_root_test);
-    assign_to(S_root_test1);
-    assign_to(S_root_test2);
-    assign_to(S_root_test3);
-    assign_to(S_root_test4);
-    {
-
-        SnowballProgram v_1 = new SnowballProgram(this);
-        current = S_root_test;
-        cursor = 0;
-        limit = current.length();
-        int v_2 = cursor;
-        lab0: {
-            bra = cursor;
-            if (!(in_grouping(g_g1, 1575, 1610)))
-            {
-                break lab0;
-            }
-            ket = cursor;
-            B_case1 = true;
-        }
-        cursor = v_2;
-        int v_3 = cursor;
-        lab1: {
-            {
-                int c = cursor + 2;
-                if (0 > c || c > limit)
-                {
-                    break lab1;
-                }
-                cursor = c;
-            }
-            bra = cursor;
-            if (!(in_grouping(g_g2, 1575, 1578)))
-            {
-                break lab1;
-            }
-            ket = cursor;
-            B_case2 = true;
-        }
-        cursor = v_3;
-        copy_from(v_1);
-    }
-    {
-
-        SnowballProgram v_4 = new SnowballProgram(this);
-        current = S_root_test1;
-        cursor = 0;
-        limit = current.length();
-        int v_5 = cursor;
-        lab2: {
-            bra = cursor;
-            if (!(in_grouping(g_g3, 1575, 1605)))
-            {
-                break lab2;
-            }
-            ket = cursor;
-            B_case3 = true;
-        }
-        cursor = v_5;
-        int v_6 = cursor;
-        lab3: {
-            {
-                int c = cursor + 3;
-                if (0 > c || c > limit)
-                {
-                    break lab3;
-                }
-                cursor = c;
-            }
-            bra = cursor;
-            if (!(in_grouping(g_v, 1575, 1610)))
-            {
-                break lab3;
-            }
-            ket = cursor;
-            B_case4 = true;
-        }
-        cursor = v_6;
-        copy_from(v_4);
-    }
-    {
-
-        SnowballProgram v_7 = new SnowballProgram(this);
-        current = S_root_test2;
-        cursor = 0;
-        limit = current.length();
-        int v_8 = cursor;
-        lab4: {
-            {
-                int c = cursor + 2;
-                if (0 > c || c > limit)
-                {
-                    break lab4;
-                }
-                cursor = c;
-            }
-            bra = cursor;
-            if (!(eq_s("\u0627\u064A")))
-            {
-                break lab4;
-            }
-            ket = cursor;
-            B_case5 = true;
-        }
-        cursor = v_8;
-        copy_from(v_7);
-    }
-    {
-
-        SnowballProgram v_9 = new SnowballProgram(this);
-        current = S_root_test3;
-        cursor = 0;
-        limit = current.length();
-        int v_10 = cursor;
-        lab5: {
-            {
-                int c = cursor + 1;
-                if (0 > c || c > limit)
-                {
-                    break lab5;
-                }
-                cursor = c;
-            }
-            bra = cursor;
-            if (!(eq_s("\u0648\u0627")))
-            {
-                break lab5;
-            }
-            ket = cursor;
-            B_case6 = true;
-        }
-        cursor = v_10;
-        copy_from(v_9);
-    }
-    {
-
-        SnowballProgram v_11 = new SnowballProgram(this);
-        current = S_root_test4;
-        cursor = 0;
-        limit = current.length();
-        int v_12 = cursor;
-        lab6: {
-            {
-                int c = cursor + 1;
-                if (0 > c || c > limit)
-                {
-                    break lab6;
-                }
-                cursor = c;
-            }
-            bra = cursor;
-            if (!(eq_s("\u0627")))
-            {
-                break lab6;
-            }
-            ket = cursor;
-            {
-                int c = cursor + 1;
-                if (0 > c || c > limit)
-                {
-                    break lab6;
-                }
-                cursor = c;
-            }
-            bra = cursor;
-            if (!(eq_s("\u0648")))
-            {
-                break lab6;
-            }
-            ket = cursor;
-            B_case7 = true;
-        }
-        cursor = v_12;
-        copy_from(v_11);
-    }
-    return true;
-}
-
-private boolean r_Pattern_Step2a() {
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_fa);
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_ain);
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_lam1);
-    B_root_found = true;
-    return true;
-}
-
-private boolean r_Pattern_Step2a1() {
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_fa);
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_ain);
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_lam1);
-    B_root_found = true;
-    return true;
-}
-
-private boolean r_Pattern_Step2b() {
-    I_word_len = current.length();
-    bra = cursor;
-    if (find_among(a_6) == 0)
-    {
-        return false;
-    }
-    ket = cursor;
-    if (!(I_word_len == 5))
-    {
-        return false;
-    }
-    slice_del();
-    return true;
-}
-
-private boolean r_Pattern_Step2c() {
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_fa);
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_ain);
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_lam1);
-    B_root_found = true;
-    return true;
-}
-
-private boolean r_Pattern_Step2c2() {
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_fa);
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_ain);
-    {
-        int c = cursor + 2;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_lam1);
-    B_root_found = true;
-    return true;
-}
-
-private boolean r_Pattern_Step2c4() {
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_fa);
-    {
-        int c = cursor + 2;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_ain);
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_lam1);
-    B_root_found = true;
-    return true;
-}
-
-private boolean r_Pattern_Checks3() {
-    assign_to(S_root_test);
-    assign_to(S_root_test1);
-    {
-
-        SnowballProgram v_1 = new SnowballProgram(this);
-        current = S_root_test;
-        cursor = 0;
-        limit = current.length();
-        int v_2 = cursor;
-        lab0: {
-            bra = cursor;
-            if (!(in_grouping(g_g2, 1575, 1578)))
-            {
-                break lab0;
-            }
-            ket = cursor;
-            {
-                int c = cursor + 1;
-                if (0 > c || c > limit)
-                {
-                    break lab0;
-                }
-                cursor = c;
-            }
-            bra = cursor;
-            if (!(in_grouping(g_g2, 1575, 1578)))
-            {
-                break lab0;
-            }
-            ket = cursor;
-            {
-                int c = cursor + 1;
-                if (0 > c || c > limit)
-                {
-                    break lab0;
-                }
-                cursor = c;
-            }
-            bra = cursor;
-            if (!(in_grouping(g_g4, 1575, 1610)))
-            {
-                break lab0;
-            }
-            ket = cursor;
-            B_case8 = true;
-        }
-        cursor = v_2;
-        copy_from(v_1);
-    }
-    {
-
-        SnowballProgram v_3 = new SnowballProgram(this);
-        current = S_root_test1;
-        cursor = 0;
-        limit = current.length();
-        int v_4 = cursor;
-        lab1: {
-            {
-                int c = cursor + 2;
-                if (0 > c || c > limit)
-                {
-                    break lab1;
-                }
-                cursor = c;
-            }
-            bra = cursor;
-            if (!(in_grouping(g_all_letters, 1575, 1610)))
-            {
-                break lab1;
-            }
-            ket = cursor;
-            slice_to(S_ch);
-            {
-                int c = cursor + 1;
-                if (0 > c || c > limit)
-                {
-                    break lab1;
-                }
-                cursor = c;
-            }
-            bra = cursor;
-            if (!(in_grouping(g_all_letters, 1575, 1610)))
-            {
-                break lab1;
-            }
-            ket = cursor;
-            slice_to(S_ch1);
-            {
-
-                SnowballProgram v_5 = new SnowballProgram(this);
-                current = S_ch;
-                cursor = 0;
-                limit = current.length();
-                if (!(eq_s(S_ch1)))
-                {
-                    copy_from(v_5);
-                    break lab1;
-                }
-                copy_from(v_5);
-            }
-            B_case9 = true;
-        }
-        cursor = v_4;
-        copy_from(v_3);
-    }
-    return true;
-}
-
-private boolean r_Pattern_Step3a() {
-    I_word_len = current.length();
-    bra = cursor;
-    if (find_among(a_7) == 0)
-    {
-        return false;
-    }
-    ket = cursor;
-    if (!(I_word_len == 6))
-    {
-        return false;
-    }
-    slice_del();
-    return true;
-}
-
-private boolean r_Pattern_Step3b() {
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_fa);
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_ain);
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_lam1);
-    B_root_found = true;
-    return true;
-}
-
-private boolean r_Pattern_Step3c() {
-    {
-        int c = cursor + 1;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_fa);
-    {
-        int c = cursor + 2;
-        if (0 > c || c > limit)
-        {
-            return false;
-        }
-        cursor = c;
-    }
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_ain);
-    bra = cursor;
-    if (!(in_grouping(g_all_letters, 1575, 1610)))
-    {
-        return false;
-    }
-    ket = cursor;
-    slice_to(S_lam1);
-    B_root_found = true;
-    return true;
-}
-
 private boolean r_Prefix_Step1() {
     int among_var;
-    I_word_len = current.length();
     bra = cursor;
-    among_var = find_among(a_8);
+    among_var = find_among(a_5);
     if (among_var == 0)
     {
         return false;
@@ -1592,28 +684,28 @@ private boolean r_Prefix_Step1() {
     ket = cursor;
     switch (among_var) {
         case 1:
-            if (!(I_word_len > 3))
+            if (!(current.length() > 3))
             {
                 return false;
             }
             slice_from("\u0623");
             break;
         case 2:
-            if (!(I_word_len > 3))
+            if (!(current.length() > 3))
             {
                 return false;
             }
             slice_from("\u0622");
             break;
         case 3:
-            if (!(I_word_len > 3))
+            if (!(current.length() > 3))
             {
                 return false;
             }
             slice_from("\u0627");
             break;
         case 4:
-            if (!(I_word_len > 3))
+            if (!(current.length() > 3))
             {
                 return false;
             }
@@ -1624,14 +716,13 @@ private boolean r_Prefix_Step1() {
 }
 
 private boolean r_Prefix_Step2a() {
-    I_word_len = current.length();
     bra = cursor;
-    if (find_among(a_9) == 0)
+    if (find_among(a_6) == 0)
     {
         return false;
     }
     ket = cursor;
-    if (!(I_word_len > 5))
+    if (!(current.length() > 5))
     {
         return false;
     }
@@ -1640,36 +731,13 @@ private boolean r_Prefix_Step2a() {
 }
 
 private boolean r_Prefix_Step2b() {
-    I_word_len = current.length();
-    {
-        int v_1 = cursor;
-        lab0: {
-            if (!(eq_s("\u0641\u0627")))
-            {
-                break lab0;
-            }
-            return false;
-        }
-        cursor = v_1;
-    }
-    {
-        int v_2 = cursor;
-        lab1: {
-            if (!(eq_s("\u0648\u0627")))
-            {
-                break lab1;
-            }
-            return false;
-        }
-        cursor = v_2;
-    }
     bra = cursor;
-    if (find_among(a_10) == 0)
+    if (find_among(a_7) == 0)
     {
         return false;
     }
     ket = cursor;
-    if (!(I_word_len > 3))
+    if (!(current.length() > 3))
     {
         return false;
     }
@@ -1679,9 +747,8 @@ private boolean r_Prefix_Step2b() {
 
 private boolean r_Prefix_Step3a_Noun() {
     int among_var;
-    I_word_len = current.length();
     bra = cursor;
-    among_var = find_among(a_11);
+    among_var = find_among(a_8);
     if (among_var == 0)
     {
         return false;
@@ -1689,14 +756,14 @@ private boolean r_Prefix_Step3a_Noun() {
     ket = cursor;
     switch (among_var) {
         case 1:
-            if (!(I_word_len > 5))
+            if (!(current.length() > 5))
             {
                 return false;
             }
             slice_del();
             break;
         case 2:
-            if (!(I_word_len > 4))
+            if (!(current.length() > 4))
             {
                 return false;
             }
@@ -1708,7 +775,6 @@ private boolean r_Prefix_Step3a_Noun() {
 
 private boolean r_Prefix_Step3b_Noun() {
     int among_var;
-    I_word_len = current.length();
     {
         int v_1 = cursor;
         lab0: {
@@ -1721,7 +787,7 @@ private boolean r_Prefix_Step3b_Noun() {
         cursor = v_1;
     }
     bra = cursor;
-    among_var = find_among(a_12);
+    among_var = find_among(a_9);
     if (among_var == 0)
     {
         return false;
@@ -1729,28 +795,28 @@ private boolean r_Prefix_Step3b_Noun() {
     ket = cursor;
     switch (among_var) {
         case 1:
-            if (!(I_word_len > 3))
+            if (!(current.length() > 3))
             {
                 return false;
             }
             slice_del();
             break;
         case 2:
-            if (!(I_word_len > 4))
+            if (!(current.length() > 4))
             {
                 return false;
             }
             slice_del();
             break;
         case 3:
-            if (!(I_word_len > 3))
+            if (!(current.length() > 3))
             {
                 return false;
             }
             slice_from("\u0628");
             break;
         case 4:
-            if (!(I_word_len > 3))
+            if (!(current.length() > 3))
             {
                 return false;
             }
@@ -1760,11 +826,25 @@ private boolean r_Prefix_Step3b_Noun() {
     return true;
 }
 
+private boolean r_Prefix_Step3c_Noun() {
+    bra = cursor;
+    if (find_among(a_10) == 0)
+    {
+        return false;
+    }
+    ket = cursor;
+    if (!(current.length() > 4))
+    {
+        return false;
+    }
+    slice_del();
+    return true;
+}
+
 private boolean r_Prefix_Step3_Verb() {
     int among_var;
-    I_word_len = current.length();
     bra = cursor;
-    among_var = find_among(a_13);
+    among_var = find_among(a_11);
     if (among_var == 0)
     {
         return false;
@@ -1772,28 +852,28 @@ private boolean r_Prefix_Step3_Verb() {
     ket = cursor;
     switch (among_var) {
         case 1:
-            if (!(I_word_len > 4))
+            if (!(current.length() > 4))
             {
                 return false;
             }
             slice_from("\u064A");
             break;
         case 2:
-            if (!(I_word_len > 4))
+            if (!(current.length() > 4))
             {
                 return false;
             }
             slice_from("\u062A");
             break;
         case 3:
-            if (!(I_word_len > 4))
+            if (!(current.length() > 4))
             {
                 return false;
             }
             slice_from("\u0646");
             break;
         case 4:
-            if (!(I_word_len > 4))
+            if (!(current.length() > 4))
             {
                 return false;
             }
@@ -1804,14 +884,13 @@ private boolean r_Prefix_Step3_Verb() {
 }
 
 private boolean r_Prefix_Step4_Verb() {
-    I_word_len = current.length();
     bra = cursor;
-    if (find_among(a_14) == 0)
+    if (find_among(a_12) == 0)
     {
         return false;
     }
     ket = cursor;
-    if (!(I_word_len > 4))
+    if (!(current.length() > 4))
     {
         return false;
     }
@@ -1821,43 +900,10 @@ private boolean r_Prefix_Step4_Verb() {
     return true;
 }
 
-private boolean r_Prefix_Step5_Verb() {
-    I_word_len = current.length();
-    bra = cursor;
-    if (find_among(a_15) == 0)
-    {
-        return false;
-    }
-    ket = cursor;
-    if (!(I_word_len == 6))
-    {
-        return false;
-    }
-    slice_del();
-    return true;
-}
-
-private boolean r_Pattern_Step2c1() {
-    I_word_len = current.length();
-    ket = cursor;
-    if (find_among_b(a_16) == 0)
-    {
-        return false;
-    }
-    bra = cursor;
-    if (!(I_word_len == 5))
-    {
-        return false;
-    }
-    slice_del();
-    return true;
-}
-
 private boolean r_Suffix_Noun_Step1a() {
     int among_var;
-    I_word_len = current.length();
     ket = cursor;
-    among_var = find_among_b(a_17);
+    among_var = find_among_b(a_13);
     if (among_var == 0)
     {
         return false;
@@ -1865,21 +911,21 @@ private boolean r_Suffix_Noun_Step1a() {
     bra = cursor;
     switch (among_var) {
         case 1:
-            if (!(I_word_len >= 4))
+            if (!(current.length() >= 4))
             {
                 return false;
             }
             slice_del();
             break;
         case 2:
-            if (!(I_word_len >= 5))
+            if (!(current.length() >= 5))
             {
                 return false;
             }
             slice_del();
             break;
         case 3:
-            if (!(I_word_len >= 6))
+            if (!(current.length() >= 6))
             {
                 return false;
             }
@@ -1890,14 +936,13 @@ private boolean r_Suffix_Noun_Step1a() {
 }
 
 private boolean r_Suffix_Noun_Step1b() {
-    I_word_len = current.length();
     ket = cursor;
-    if (find_among_b(a_18) == 0)
+    if (find_among_b(a_14) == 0)
     {
         return false;
     }
     bra = cursor;
-    if (!(I_word_len > 5))
+    if (!(current.length() > 5))
     {
         return false;
     }
@@ -1906,14 +951,13 @@ private boolean r_Suffix_Noun_Step1b() {
 }
 
 private boolean r_Suffix_Noun_Step2a() {
-    I_word_len = current.length();
     ket = cursor;
-    if (find_among_b(a_19) == 0)
+    if (find_among_b(a_15) == 0)
     {
         return false;
     }
     bra = cursor;
-    if (!(I_word_len > 4))
+    if (!(current.length() > 4))
     {
         return false;
     }
@@ -1922,14 +966,13 @@ private boolean r_Suffix_Noun_Step2a() {
 }
 
 private boolean r_Suffix_Noun_Step2b() {
-    I_word_len = current.length();
     ket = cursor;
-    if (find_among_b(a_20) == 0)
+    if (find_among_b(a_16) == 0)
     {
         return false;
     }
     bra = cursor;
-    if (!(I_word_len >= 5))
+    if (!(current.length() >= 5))
     {
         return false;
     }
@@ -1938,14 +981,13 @@ private boolean r_Suffix_Noun_Step2b() {
 }
 
 private boolean r_Suffix_Noun_Step2c1() {
-    I_word_len = current.length();
     ket = cursor;
-    if (find_among_b(a_21) == 0)
+    if (find_among_b(a_17) == 0)
     {
         return false;
     }
     bra = cursor;
-    if (!(I_word_len >= 4))
+    if (!(current.length() >= 4))
     {
         return false;
     }
@@ -1955,9 +997,8 @@ private boolean r_Suffix_Noun_Step2c1() {
 
 private boolean r_Suffix_Noun_Step2c2() {
     int among_var;
-    I_word_len = current.length();
     ket = cursor;
-    among_var = find_among_b(a_22);
+    among_var = find_among_b(a_18);
     if (among_var == 0)
     {
         return false;
@@ -1965,14 +1006,14 @@ private boolean r_Suffix_Noun_Step2c2() {
     bra = cursor;
     switch (among_var) {
         case 1:
-            if (!(I_word_len >= 3))
+            if (!(current.length() >= 3))
             {
                 return false;
             }
             slice_del();
             break;
         case 2:
-            if (!(I_word_len >= 5))
+            if (!(current.length() >= 5))
             {
                 return false;
             }
@@ -1983,14 +1024,13 @@ private boolean r_Suffix_Noun_Step2c2() {
 }
 
 private boolean r_Suffix_Noun_Step3() {
-    I_word_len = current.length();
     ket = cursor;
-    if (find_among_b(a_23) == 0)
+    if (find_among_b(a_19) == 0)
     {
         return false;
     }
     bra = cursor;
-    if (!(I_word_len >= 3))
+    if (!(current.length() >= 3))
     {
         return false;
     }
@@ -2000,9 +1040,8 @@ private boolean r_Suffix_Noun_Step3() {
 
 private boolean r_Suffix_Verb_Step1() {
     int among_var;
-    I_word_len = current.length();
     ket = cursor;
-    among_var = find_among_b(a_24);
+    among_var = find_among_b(a_20);
     if (among_var == 0)
     {
         return false;
@@ -2010,21 +1049,21 @@ private boolean r_Suffix_Verb_Step1() {
     bra = cursor;
     switch (among_var) {
         case 1:
-            if (!(I_word_len >= 4))
+            if (!(current.length() >= 4))
             {
                 return false;
             }
             slice_del();
             break;
         case 2:
-            if (!(I_word_len >= 5))
+            if (!(current.length() >= 5))
             {
                 return false;
             }
             slice_del();
             break;
         case 3:
-            if (!(I_word_len >= 6))
+            if (!(current.length() >= 6))
             {
                 return false;
             }
@@ -2036,9 +1075,8 @@ private boolean r_Suffix_Verb_Step1() {
 
 private boolean r_Suffix_Verb_Step2a() {
     int among_var;
-    I_word_len = current.length();
     ket = cursor;
-    among_var = find_among_b(a_25);
+    among_var = find_among_b(a_21);
     if (among_var == 0)
     {
         return false;
@@ -2046,28 +1084,28 @@ private boolean r_Suffix_Verb_Step2a() {
     bra = cursor;
     switch (among_var) {
         case 1:
-            if (!(I_word_len >= 4))
+            if (!(current.length() >= 4))
             {
                 return false;
             }
             slice_del();
             break;
         case 2:
-            if (!(I_word_len >= 5))
+            if (!(current.length() >= 5))
             {
                 return false;
             }
             slice_del();
             break;
         case 3:
-            if (!(I_word_len > 5))
+            if (!(current.length() > 5))
             {
                 return false;
             }
             slice_del();
             break;
         case 4:
-            if (!(I_word_len >= 6))
+            if (!(current.length() >= 6))
             {
                 return false;
             }
@@ -2078,14 +1116,13 @@ private boolean r_Suffix_Verb_Step2a() {
 }
 
 private boolean r_Suffix_Verb_Step2b() {
-    I_word_len = current.length();
     ket = cursor;
-    if (find_among_b(a_26) == 0)
+    if (find_among_b(a_22) == 0)
     {
         return false;
     }
     bra = cursor;
-    if (!(I_word_len >= 5))
+    if (!(current.length() >= 5))
     {
         return false;
     }
@@ -2095,9 +1132,8 @@ private boolean r_Suffix_Verb_Step2b() {
 
 private boolean r_Suffix_Verb_Step2c() {
     int among_var;
-    I_word_len = current.length();
     ket = cursor;
-    among_var = find_among_b(a_27);
+    among_var = find_among_b(a_23);
     if (among_var == 0)
     {
         return false;
@@ -2105,14 +1141,14 @@ private boolean r_Suffix_Verb_Step2c() {
     bra = cursor;
     switch (among_var) {
         case 1:
-            if (!(I_word_len >= 4))
+            if (!(current.length() >= 4))
             {
                 return false;
             }
             slice_del();
             break;
         case 2:
-            if (!(I_word_len >= 6))
+            if (!(current.length() >= 6))
             {
                 return false;
             }
@@ -2123,9 +1159,8 @@ private boolean r_Suffix_Verb_Step2c() {
 }
 
 private boolean r_Suffix_All_alef_maqsura() {
-    I_word_len = current.length();
     ket = cursor;
-    if (find_among_b(a_28) == 0)
+    if (find_among_b(a_24) == 0)
     {
         return false;
     }
@@ -2147,9 +1182,7 @@ public boolean stem() {
     r_Checks2();
     cursor = limit - v_2;
     cursor = limit_backward;
-    int v_3 = cursor;
     r_Normalize_pre();
-    cursor = v_3;
     limit_backward = cursor;
     cursor = limit;
     int v_4 = limit - cursor;
@@ -2164,58 +1197,73 @@ public boolean stem() {
                 lab3: {
                     int v_6 = limit - cursor;
                     lab4: {
-                        {
-                            int v_7 = 1;
-                            while(true)
-                            {
+                        int v_7 = limit - cursor;
+                        lab5: {
+                            lab6: {
                                 int v_8 = limit - cursor;
-                                lab5: {
-                                    if (!r_Suffix_Verb_Step1())
+                                lab7: {
                                     {
-                                        break lab5;
+                                        int v_9 = 1;
+                                        while(true)
+                                        {
+                                            int v_10 = limit - cursor;
+                                            lab8: {
+                                                if (!r_Suffix_Verb_Step1())
+                                                {
+                                                    break lab8;
+                                                }
+                                                v_9--;
+                                                continue;
+                                            }
+                                            cursor = limit - v_10;
+                                            break;
+                                        }
+                                        if (v_9 > 0)
+                                        {
+                                            break lab7;
+                                        }
                                     }
-                                    v_7--;
-                                    continue;
+                                    lab9: {
+                                        int v_11 = limit - cursor;
+                                        lab10: {
+                                            if (!r_Suffix_Verb_Step2a())
+                                            {
+                                                break lab10;
+                                            }
+                                            break lab9;
+                                        }
+                                        cursor = limit - v_11;
+                                        lab11: {
+                                            if (!r_Suffix_Verb_Step2c())
+                                            {
+                                                break lab11;
+                                            }
+                                            break lab9;
+                                        }
+                                        cursor = limit - v_11;
+                                        if (cursor <= limit_backward)
+                                        {
+                                            break lab7;
+                                        }
+                                        cursor--;
+                                    }
+                                    break lab6;
                                 }
                                 cursor = limit - v_8;
-                                break;
-                            }
-                            if (v_7 > 0)
-                            {
-                                break lab4;
-                            }
-                        }
-                        lab6: {
-                            int v_9 = limit - cursor;
-                            lab7: {
+                                lab12: {
+                                    if (!r_Suffix_Verb_Step2b())
+                                    {
+                                        break lab12;
+                                    }
+                                    break lab6;
+                                }
+                                cursor = limit - v_8;
                                 if (!r_Suffix_Verb_Step2a())
                                 {
-                                    break lab7;
+                                    cursor = limit - v_7;
+                                    break lab5;
                                 }
-                                break lab6;
                             }
-                            cursor = limit - v_9;
-                            lab8: {
-                                if (!r_Suffix_Verb_Step2c())
-                                {
-                                    break lab8;
-                                }
-                                break lab6;
-                            }
-                            cursor = limit - v_9;
-                            if (cursor <= limit_backward)
-                            {
-                                break lab4;
-                            }
-                            cursor--;
-                        }
-                        break lab3;
-                    }
-                    cursor = limit - v_6;
-                    lab9: {
-                        if (!r_Suffix_Verb_Step2b())
-                        {
-                            break lab9;
                         }
                         break lab3;
                     }
@@ -2228,126 +1276,126 @@ public boolean stem() {
                 break lab1;
             }
             cursor = limit - v_5;
-            lab10: {
+            lab13: {
                 if (!(B_is_noun))
                 {
-                    break lab10;
+                    break lab13;
                 }
-                int v_10 = limit - cursor;
-                lab11: {
-                    lab12: {
-                        int v_11 = limit - cursor;
-                        lab13: {
+                int v_12 = limit - cursor;
+                lab14: {
+                    lab15: {
+                        int v_13 = limit - cursor;
+                        lab16: {
                             if (!r_Suffix_Noun_Step2c2())
                             {
-                                break lab13;
+                                break lab16;
                             }
-                            break lab12;
+                            break lab15;
                         }
-                        cursor = limit - v_11;
-                        lab14: {
-                            lab15: {
+                        cursor = limit - v_13;
+                        lab17: {
+                            lab18: {
                                 if (!(B_is_defined))
                                 {
-                                    break lab15;
+                                    break lab18;
                                 }
-                                break lab14;
+                                break lab17;
                             }
                             if (!r_Suffix_Noun_Step1a())
                             {
-                                break lab14;
+                                break lab17;
                             }
-                            lab16: {
-                                int v_13 = limit - cursor;
-                                lab17: {
+                            lab19: {
+                                int v_15 = limit - cursor;
+                                lab20: {
                                     if (!r_Suffix_Noun_Step2a())
                                     {
-                                        break lab17;
+                                        break lab20;
                                     }
-                                    break lab16;
+                                    break lab19;
                                 }
-                                cursor = limit - v_13;
-                                lab18: {
+                                cursor = limit - v_15;
+                                lab21: {
                                     if (!r_Suffix_Noun_Step2b())
                                     {
-                                        break lab18;
+                                        break lab21;
                                     }
-                                    break lab16;
+                                    break lab19;
                                 }
-                                cursor = limit - v_13;
-                                lab19: {
-                                    if (!r_Suffix_Noun_Step2c1())
-                                    {
-                                        break lab19;
-                                    }
-                                    break lab16;
-                                }
-                                cursor = limit - v_13;
-                                if (cursor <= limit_backward)
-                                {
-                                    break lab14;
-                                }
-                                cursor--;
-                            }
-                            break lab12;
-                        }
-                        cursor = limit - v_11;
-                        lab20: {
-                            if (!r_Suffix_Noun_Step1b())
-                            {
-                                break lab20;
-                            }
-                            lab21: {
-                                int v_14 = limit - cursor;
+                                cursor = limit - v_15;
                                 lab22: {
-                                    if (!r_Suffix_Noun_Step2a())
+                                    if (!r_Suffix_Noun_Step2c1())
                                     {
                                         break lab22;
                                     }
-                                    break lab21;
+                                    break lab19;
                                 }
-                                cursor = limit - v_14;
-                                lab23: {
+                                cursor = limit - v_15;
+                                if (cursor <= limit_backward)
+                                {
+                                    break lab17;
+                                }
+                                cursor--;
+                            }
+                            break lab15;
+                        }
+                        cursor = limit - v_13;
+                        lab23: {
+                            if (!r_Suffix_Noun_Step1b())
+                            {
+                                break lab23;
+                            }
+                            lab24: {
+                                int v_16 = limit - cursor;
+                                lab25: {
+                                    if (!r_Suffix_Noun_Step2a())
+                                    {
+                                        break lab25;
+                                    }
+                                    break lab24;
+                                }
+                                cursor = limit - v_16;
+                                lab26: {
                                     if (!r_Suffix_Noun_Step2b())
                                     {
-                                        break lab23;
+                                        break lab26;
                                     }
-                                    break lab21;
+                                    break lab24;
                                 }
-                                cursor = limit - v_14;
+                                cursor = limit - v_16;
                                 if (!r_Suffix_Noun_Step2c1())
                                 {
-                                    break lab20;
+                                    break lab23;
                                 }
                             }
-                            break lab12;
+                            break lab15;
                         }
-                        cursor = limit - v_11;
-                        lab24: {
-                            lab25: {
+                        cursor = limit - v_13;
+                        lab27: {
+                            lab28: {
                                 if (!(B_is_defined))
                                 {
-                                    break lab25;
+                                    break lab28;
                                 }
-                                break lab24;
+                                break lab27;
                             }
                             if (!r_Suffix_Noun_Step2a())
                             {
-                                break lab24;
+                                break lab27;
                             }
-                            break lab12;
+                            break lab15;
                         }
-                        cursor = limit - v_11;
+                        cursor = limit - v_13;
                         if (!r_Suffix_Noun_Step2b())
                         {
-                            cursor = limit - v_10;
-                            break lab11;
+                            cursor = limit - v_12;
+                            break lab14;
                         }
                     }
                 }
                 if (!r_Suffix_Noun_Step3())
                 {
-                    break lab10;
+                    break lab13;
                 }
                 break lab1;
             }
@@ -2360,572 +1408,85 @@ public boolean stem() {
     }
     cursor = limit - v_4;
     cursor = limit_backward;
-    int v_16 = cursor;
-    lab26: {
-        int v_17 = cursor;
-        lab27: {
+    int v_18 = cursor;
+    lab29: {
+        int v_19 = cursor;
+        lab30: {
             if (!r_Prefix_Step1())
             {
-                cursor = v_17;
-                break lab27;
+                cursor = v_19;
+                break lab30;
             }
         }
-        int v_18 = cursor;
-        lab28: {
-            lab29: {
-                int v_19 = cursor;
-                lab30: {
+        int v_20 = cursor;
+        lab31: {
+            lab32: {
+                int v_21 = cursor;
+                lab33: {
                     if (!r_Prefix_Step2a())
                     {
-                        break lab30;
+                        break lab33;
                     }
-                    break lab29;
+                    break lab32;
                 }
-                cursor = v_19;
+                cursor = v_21;
                 if (!r_Prefix_Step2b())
                 {
-                    cursor = v_18;
-                    break lab28;
+                    cursor = v_20;
+                    break lab31;
                 }
             }
         }
-        lab31: {
-            int v_20 = cursor;
-            lab32: {
+        lab34: {
+            int v_22 = cursor;
+            lab35: {
                 if (!r_Prefix_Step3a_Noun())
                 {
-                    break lab32;
+                    break lab35;
                 }
-                break lab31;
+                break lab34;
             }
-            cursor = v_20;
-            lab33: {
+            cursor = v_22;
+            lab36: {
                 if (!(B_is_noun))
                 {
-                    break lab33;
+                    break lab36;
                 }
-                if (!r_Prefix_Step3b_Noun())
+                int v_23 = cursor;
+                lab37: {
+                    if (!r_Prefix_Step3b_Noun())
+                    {
+                        cursor = v_23;
+                        break lab37;
+                    }
+                }
+                if (!r_Prefix_Step3c_Noun())
                 {
-                    break lab33;
+                    break lab36;
                 }
-                break lab31;
+                break lab34;
             }
-            cursor = v_20;
+            cursor = v_22;
             if (!(B_is_verb))
             {
-                break lab26;
+                break lab29;
             }
-            int v_21 = cursor;
-            lab34: {
+            int v_24 = cursor;
+            lab38: {
                 if (!r_Prefix_Step3_Verb())
                 {
-                    cursor = v_21;
-                    break lab34;
+                    cursor = v_24;
+                    break lab38;
                 }
             }
             if (!r_Prefix_Step4_Verb())
             {
-                break lab26;
+                break lab29;
             }
         }
     }
-    cursor = v_16;
+    cursor = v_18;
     r_Normalize_post();
-    assign_to(S_root);
-    {
-
-        SnowballProgram v_23 = new SnowballProgram(this);
-        current = S_root;
-        cursor = 0;
-        limit = current.length();
-        int v_24 = cursor;
-        lab35: {
-            lab36: {
-                int v_25 = cursor;
-                lab37: {
-                    if (!r_Pattern_Step1c1())
-                    {
-                        break lab37;
-                    }
-                    break lab36;
-                }
-                cursor = v_25;
-                lab38: {
-                    if (!r_Pattern_Step2b())
-                    {
-                        break lab38;
-                    }
-                    break lab36;
-                }
-                cursor = v_25;
-                if (!r_Pattern_Step3a())
-                {
-                    break lab35;
-                }
-            }
-        }
-        cursor = v_24;
-        copy_from(v_23);
-    }
-    {
-
-        SnowballProgram v_26 = new SnowballProgram(this);
-        current = S_root;
-        cursor = 0;
-        limit = current.length();
-        limit_backward = cursor;
-        cursor = limit;
-        int v_27 = limit - cursor;
-        r_Pattern_Step2c1();
-        cursor = limit - v_27;
-        cursor = limit_backward;
-        copy_from(v_26);
-    }
-    {
-
-        SnowballProgram v_28 = new SnowballProgram(this);
-        current = S_stemmed_word;
-        cursor = 0;
-        limit = current.length();
-        {
-            int c = cursor;
-            insert(cursor, limit, S_root);
-            cursor = c;
-        }
-        copy_from(v_28);
-    }
-    {
-
-        SnowballProgram v_29 = new SnowballProgram(this);
-        current = S_stemmed_word;
-        cursor = 0;
-        limit = current.length();
-        int v_30 = cursor;
-        lab39: {
-            I_word_len = current.length();
-            B_meem_found = false;
-            B_alef_found = false;
-            B_v_found = false;
-            B_case1 = false;
-            B_case2 = false;
-            B_case3 = false;
-            B_case4 = false;
-            B_case5 = false;
-            B_case6 = false;
-            B_case7 = false;
-            B_case8 = false;
-            B_case9 = false;
-            B_root_found = false;
-            {
-
-                SnowballProgram v_31 = new SnowballProgram(this);
-                current = S_fa;
-                cursor = 0;
-                limit = current.length();
-                {
-                    int c = cursor;
-                    insert(cursor, limit, "");
-                    cursor = c;
-                }
-                copy_from(v_31);
-            }
-            {
-
-                SnowballProgram v_32 = new SnowballProgram(this);
-                current = S_ain;
-                cursor = 0;
-                limit = current.length();
-                {
-                    int c = cursor;
-                    insert(cursor, limit, "");
-                    cursor = c;
-                }
-                copy_from(v_32);
-            }
-            {
-
-                SnowballProgram v_33 = new SnowballProgram(this);
-                current = S_lam1;
-                cursor = 0;
-                limit = current.length();
-                {
-                    int c = cursor;
-                    insert(cursor, limit, "");
-                    cursor = c;
-                }
-                copy_from(v_33);
-            }
-            lab40: {
-                lab41: {
-                    if (!(I_word_len == 4))
-                    {
-                        break lab41;
-                    }
-                    int v_35 = cursor;
-                    r_Check_Pattern1();
-                    cursor = v_35;
-                    int v_36 = cursor;
-                    lab42: {
-                        lab43: {
-                            int v_37 = cursor;
-                            lab44: {
-                                if (!(B_meem_found))
-                                {
-                                    break lab44;
-                                }
-                                lab45: {
-                                    int v_38 = cursor;
-                                    lab46: {
-                                        if (!(B_alef_found))
-                                        {
-                                            break lab46;
-                                        }
-                                        if (!r_Pattern_Step1a())
-                                        {
-                                            break lab46;
-                                        }
-                                        break lab45;
-                                    }
-                                    cursor = v_38;
-                                    lab47: {
-                                        if (!(B_alef_found))
-                                        {
-                                            break lab47;
-                                        }
-                                        break lab44;
-                                    }
-                                    lab48: {
-                                        int v_40 = cursor;
-                                        lab49: {
-                                            if (!(B_v_found))
-                                            {
-                                                break lab49;
-                                            }
-                                            if (!r_Pattern_Step1a1())
-                                            {
-                                                break lab49;
-                                            }
-                                            break lab48;
-                                        }
-                                        cursor = v_40;
-                                        lab50: {
-                                            if (!(B_v_found))
-                                            {
-                                                break lab50;
-                                            }
-                                            break lab44;
-                                        }
-                                        if (!r_Pattern_Step1a2())
-                                        {
-                                            break lab44;
-                                        }
-                                    }
-                                }
-                                break lab43;
-                            }
-                            cursor = v_37;
-                            lab51: {
-                                if (!(B_meem_found))
-                                {
-                                    break lab51;
-                                }
-                                break lab42;
-                            }
-                            lab52: {
-                                int v_43 = cursor;
-                                lab53: {
-                                    if (!(B_alef_found))
-                                    {
-                                        break lab53;
-                                    }
-                                    if (!r_Pattern_Step1b())
-                                    {
-                                        break lab53;
-                                    }
-                                    break lab52;
-                                }
-                                cursor = v_43;
-                                if (!(B_v_found))
-                                {
-                                    break lab42;
-                                }
-                                if (!r_Pattern_Step1c())
-                                {
-                                    break lab42;
-                                }
-                            }
-                        }
-                    }
-                    cursor = v_36;
-                    if (!(B_root_found))
-                    {
-                        break lab41;
-                    }
-                    {
-
-                        SnowballProgram v_44 = new SnowballProgram(this);
-                        current = S_root;
-                        cursor = 0;
-                        limit = current.length();
-                        {
-                            int c = cursor;
-                            insert(cursor, limit, S_lam1);
-                            cursor = c;
-                        }
-                        copy_from(v_44);
-                    }
-                    {
-
-                        SnowballProgram v_45 = new SnowballProgram(this);
-                        current = S_root;
-                        cursor = 0;
-                        limit = current.length();
-                        insert(cursor, cursor, S_ain);
-                        copy_from(v_45);
-                    }
-                    {
-
-                        SnowballProgram v_46 = new SnowballProgram(this);
-                        current = S_root;
-                        cursor = 0;
-                        limit = current.length();
-                        insert(cursor, cursor, S_fa);
-                        copy_from(v_46);
-                    }
-                    break lab40;
-                }
-                lab54: {
-                    if (!(I_word_len == 5))
-                    {
-                        break lab54;
-                    }
-                    int v_47 = cursor;
-                    r_Checks_Pattern2();
-                    cursor = v_47;
-                    int v_48 = cursor;
-                    lab55: {
-                        lab56: {
-                            int v_49 = cursor;
-                            lab57: {
-                                if (!(B_case1))
-                                {
-                                    break lab57;
-                                }
-                                if (!(B_case2))
-                                {
-                                    break lab57;
-                                }
-                                if (!r_Pattern_Step2a())
-                                {
-                                    break lab57;
-                                }
-                                break lab56;
-                            }
-                            cursor = v_49;
-                            lab58: {
-                                if (!(B_case3))
-                                {
-                                    break lab58;
-                                }
-                                if (!(B_case4))
-                                {
-                                    break lab58;
-                                }
-                                if (!r_Pattern_Step2a1())
-                                {
-                                    break lab58;
-                                }
-                                break lab56;
-                            }
-                            cursor = v_49;
-                            lab59: {
-                                if (!(B_case5))
-                                {
-                                    break lab59;
-                                }
-                                if (!r_Pattern_Step2c2())
-                                {
-                                    break lab59;
-                                }
-                                break lab56;
-                            }
-                            cursor = v_49;
-                            lab60: {
-                                if (!(B_case6))
-                                {
-                                    break lab60;
-                                }
-                                if (!r_Pattern_Step2c4())
-                                {
-                                    break lab60;
-                                }
-                                break lab56;
-                            }
-                            cursor = v_49;
-                            if (!(B_case7))
-                            {
-                                break lab55;
-                            }
-                            if (!r_Pattern_Step2c())
-                            {
-                                break lab55;
-                            }
-                        }
-                    }
-                    cursor = v_48;
-                    if (!(B_root_found))
-                    {
-                        break lab54;
-                    }
-                    {
-
-                        SnowballProgram v_50 = new SnowballProgram(this);
-                        current = S_root;
-                        cursor = 0;
-                        limit = current.length();
-                        {
-                            int c = cursor;
-                            insert(cursor, limit, S_lam1);
-                            cursor = c;
-                        }
-                        copy_from(v_50);
-                    }
-                    {
-
-                        SnowballProgram v_51 = new SnowballProgram(this);
-                        current = S_root;
-                        cursor = 0;
-                        limit = current.length();
-                        insert(cursor, cursor, S_ain);
-                        copy_from(v_51);
-                    }
-                    {
-
-                        SnowballProgram v_52 = new SnowballProgram(this);
-                        current = S_root;
-                        cursor = 0;
-                        limit = current.length();
-                        insert(cursor, cursor, S_fa);
-                        copy_from(v_52);
-                    }
-                    break lab40;
-                }
-                if (!(I_word_len == 6))
-                {
-                    break lab39;
-                }
-                int v_53 = cursor;
-                r_Pattern_Checks3();
-                cursor = v_53;
-                int v_54 = cursor;
-                lab61: {
-                    lab62: {
-                        int v_55 = cursor;
-                        lab63: {
-                            if (!(B_case8))
-                            {
-                                break lab63;
-                            }
-                            if (!r_Pattern_Step3b())
-                            {
-                                break lab63;
-                            }
-                            break lab62;
-                        }
-                        cursor = v_55;
-                        lab64: {
-                            if (!(B_case9))
-                            {
-                                break lab64;
-                            }
-                            if (!r_Pattern_Step3c())
-                            {
-                                break lab64;
-                            }
-                            break lab62;
-                        }
-                        cursor = v_55;
-                        int v_56 = cursor;
-                        lab65: {
-                            if (!r_Prefix_Step5_Verb())
-                            {
-                                break lab65;
-                            }
-                            if (!r_Checks_Pattern2())
-                            {
-                                break lab65;
-                            }
-                            if (!(B_case1))
-                            {
-                                break lab65;
-                            }
-                            if (!(B_case2))
-                            {
-                                break lab65;
-                            }
-                            if (!r_Pattern_Step2a())
-                            {
-                                break lab65;
-                            }
-                        }
-                        cursor = v_56;
-                    }
-                }
-                cursor = v_54;
-                if (!(B_root_found))
-                {
-                    break lab39;
-                }
-                {
-
-                    SnowballProgram v_57 = new SnowballProgram(this);
-                    current = S_root;
-                    cursor = 0;
-                    limit = current.length();
-                    {
-                        int c = cursor;
-                        insert(cursor, limit, S_lam1);
-                        cursor = c;
-                    }
-                    copy_from(v_57);
-                }
-                {
-
-                    SnowballProgram v_58 = new SnowballProgram(this);
-                    current = S_root;
-                    cursor = 0;
-                    limit = current.length();
-                    insert(cursor, cursor, S_ain);
-                    copy_from(v_58);
-                }
-                {
-
-                    SnowballProgram v_59 = new SnowballProgram(this);
-                    current = S_root;
-                    cursor = 0;
-                    limit = current.length();
-                    insert(cursor, cursor, S_fa);
-                    copy_from(v_59);
-                }
-            }
-        }
-        cursor = v_30;
-        copy_from(v_29);
-    }
-    {
-
-        SnowballProgram v_60 = new SnowballProgram(this);
-        current = S_root;
-        cursor = 0;
-        limit = current.length();
-        r_Normalize_post();
-        copy_from(v_60);
-    }
-    {
-        int c = cursor;
-        insert(cursor, limit, S_root);
-        cursor = c;
-    }
     return true;
 }
 
