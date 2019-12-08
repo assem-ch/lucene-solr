@@ -19,3 +19,4 @@
  * Snowball stemmer API
  */
 package org.tartarus.snowball;
+
