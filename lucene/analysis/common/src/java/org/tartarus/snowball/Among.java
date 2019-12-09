@@ -1,6 +1,5 @@
 package org.tartarus.snowball;
 
-        import java.lang.invoke.MethodHandle;
         import java.lang.reflect.Method;
 
 

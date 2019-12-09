@@ -90,7 +90,7 @@ public final class SnowballFilter extends TokenFilter {
     if (input.incrementToken()) {
       if (!keywordAttr.isKeyword()) {
         char termBuffer[] = termAtt.buffer();
-        stemmer.setCurrent(new String(termBuffer));
+        stemmer.setCurrent(new String(termBuffer).trim());
         stemmer.stem();
         final char finalTerm[] = stemmer.getCurrent().toCharArray();
         final int newLength = finalTerm.length;
