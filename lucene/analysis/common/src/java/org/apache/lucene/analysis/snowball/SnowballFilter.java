@@ -90,22 +90,14 @@ public final class SnowballFilter extends TokenFilter {
   public final boolean incrementToken() throws IOException {
     if (input.incrementToken()) {
       if (!keywordAttr.isKeyword()) {
-        char termBuffer[] = termAtt.buffer();
-        final String rawTerm = new String(termBuffer);
-        final String term = rawTerm.trim();
-
+        final String term = new String(Arrays.copyOfRange(termAtt.buffer(), 0, termAtt.length())).trim();
         stemmer.setCurrent(term);
         stemmer.stem();
         final String stem = stemmer.getCurrent();
-        System.out.println(java.util.Arrays.toString(rawTerm.toCharArray()));
-        System.out.println(java.util.Arrays.toString(term.toCharArray()));
-        System.out.println(java.util.Arrays.toString(stem.toCharArray()));
         if (!stem.equals(term)){
-          System.out.println("!= not equal");
           termAtt.copyBuffer(stem.toCharArray(), 0, stem.length());
         }
         else{
-          System.out.println("== equal");
           termAtt.setLength(stem.length());
         }
       }
