@@ -110,6 +110,10 @@ Upgrade Notes
 * SOLR-13817: Deprecate legacy SolrCache implementations. Users are encouraged to transition their
   configurations to use org.apache.solr.search.CaffeineCache instead. (ab)
 
+* SOLR-13982: Some security-related http headers such as Content-Security-Policy are now set. If you have custom html served
+  up by Solr's http server that contains inline javascript, it will no longer execute in modern browsers. You can fix your JS
+  code to not run inline anymore, or edit etc/jetty.xml and weaken the CSP, or remove/alter the headers with a reverse proxy. (rmuir)
+
 New Features
 ---------------------
 * SOLR-13821: A Package store to store and load package artifacts (noble, Ishan Chattopadhyaya)
@@ -129,6 +133,8 @@ New Features
 * SOLR-13911: Add 'missing' aggregation in JSON FacetModule (hossman, Munendra S N)
 
 * SOLR-13912: Add 'countvals' aggregation in JSON FacetModule (hossman, Munendra S N)
+
+* SOLR-12217: Support shards.preference in SolrJ for single shard collections. The parameter is now used by the CloudSolrClient and Streaming Expressions. (Houston Putman, Tomas Fernandez-Lobbe)
 
 Improvements
 ---------------------
@@ -156,6 +162,13 @@ Improvements
 
 * SOLR-13968: Support postingsFormat and docValuesFormat in schema fields. (Bruno Roustant)
 
+* SOLR-11706: Add support for aggregation on multivalued fields in JSON facets. min, max, avg, sum, sumsq, stddev,
+  variance, percentile aggregations now have support for multivalued fields. (hossman, Munendra S N)
+
+* SOLR-13987: Admin UI should not rely on javascript eval() (rmuir, Kevin Risden)
+
+* SOLR-13979: Expose separate metrics for distributed and non-distributed requests. (ab)
+
 Optimizations
 ---------------------
 (No changes)
@@ -172,7 +185,7 @@ Bug Fixes
 * SOLR-12393: Compute score if requested even when expanded docs not sorted by score in ExpandComponent.
   (David Smiley, Munendra S N)
 
-* SOLR-13877: Fix NPE in expand component when matched docs have fewer unique values. (Munendra S N)
+* SOLR-13877, SOLR-7798: Robust support for ExpandComponent when used independently of CollapsingPostFilter. (Jörg Rathlev, Michael Gibney, Munendra S N)
 
 * SOLR-13823: Fix ClassCastEx when score is requested with group.query. This also fixes score not being generated
   for distributed group.query case. (Uwe Jäger, Munendra S N)
@@ -197,6 +210,17 @@ Bug Fixes
 
 * SOLR-13465: CoreContainer.auditloggerPlugin should be volatile (janhoy, hossman)
 
+* SOLR-13805: NPE when calling /solr/admin/info/health on standalone solr (Nicholas DiPiazza, shalin)
+
+* SOLR-13954: Embedded ZooKeeper in Solr now does not try to load JettyAdminServer (janhoy)
+
+* SOLR-13087: Use EUID instead of whoami to check for root in the bin/solr script (Martijn Koster via Jason Gerlowski)
+
+* SOLR-13977: solr create -c not working under Windows 10 (janhoy)
+
+* SOLR-13966: LatLonPointSpatialField wasn't working correctly with atomic/partial updates or RTG.
+  (Thomas Wöckinger via David Smiley)
+
 Other Changes
 ---------------------
 
@@ -212,6 +236,15 @@ Other Changes
 * SOLR-13782: Solr Ref Guide no longer published in PDF format. (Cassandra Targett)
 
 * SOLR-12193: Move some log messages to TRACE level (gezapeti, janhoy)
+
+* SOLR-13885: Typos in the documentation. (KoenDG via Cassandra Targett)
+
+* SOLR-13992: Code refactored to have collection name, slice name in Replica, Slice (noble)
+
+* SOLR-13998: Add thread safety annotations to Solr. This only introduces the annotations and doesn't add these to
+  existing classes. (Anshum Gupta, Mark Miller)
+
+* SOLR-13818: Upgrade jackson to 2.10.0 (marungo, Andras Salamon via Kevin Risden)
 
 ==================  8.3.1 ==================
 
@@ -246,8 +279,6 @@ Bug Fixes
 * SOLR-13905: Make findRequestType in AuditEvent more robust (janhoy)
 
 * SOLR-13941: Tests configure Jetty differently than when running via start.jar (janhoy, Uwe Schindler)
-
-* SOLR-13977: solr create -c not working under Windows 10 (janhoy)
 
 ==================  8.3.0 ==================
 
