@@ -18,6 +18,7 @@ package org.apache.lucene.analysis.snowball;
 
 
 import java.io.IOException;
+import java.util.Arrays;
 
 import org.apache.lucene.analysis.LowerCaseFilter;
 import org.apache.lucene.analysis.TokenFilter;
@@ -90,14 +91,23 @@ public final class SnowballFilter extends TokenFilter {
     if (input.incrementToken()) {
       if (!keywordAttr.isKeyword()) {
         char termBuffer[] = termAtt.buffer();
-        stemmer.setCurrent(new String(termBuffer).trim());
+        final String rawTerm = new String(termBuffer);
+        final String term = rawTerm.trim();
+
+        stemmer.setCurrent(term);
         stemmer.stem();
-        final char finalTerm[] = stemmer.getCurrent().toCharArray();
-        final int newLength = finalTerm.length;
-        if (finalTerm != termBuffer)
-          termAtt.copyBuffer(finalTerm, 0, newLength);
-        else
-          termAtt.setLength(newLength);
+        final String stem = stemmer.getCurrent();
+        System.out.println(java.util.Arrays.toString(rawTerm.toCharArray()));
+        System.out.println(java.util.Arrays.toString(term.toCharArray()));
+        System.out.println(java.util.Arrays.toString(stem.toCharArray()));
+        if (!stem.equals(term)){
+          System.out.println("!= not equal");
+          termAtt.copyBuffer(stem.toCharArray(), 0, stem.length());
+        }
+        else{
+          System.out.println("== equal");
+          termAtt.setLength(stem.length());
+        }
       }
       return true;
     } else {
