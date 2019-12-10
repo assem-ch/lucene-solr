@@ -3,7 +3,6 @@
 package org.tartarus.snowball.ext;
 
 import org.tartarus.snowball.Among;
-import org.tartarus.snowball.SnowballProgram;
 
 /**
  * This class implements the stemming algorithm defined by a snowball script.
@@ -17,7 +16,22 @@ public class ArabicStemmer extends org.tartarus.snowball.SnowballProgram {
     private static final long serialVersionUID = 1L;
 
 private final static Among a_0[] = {
+    new Among("!", -1, 1),
+    new Among("\"", -1, 1),
+    new Among("%", -1, 1),
+    new Among("*", -1, 1),
+    new Among(",", -1, 1),
+    new Among(".", -1, 1),
+    new Among("/", -1, 1),
+    new Among(":", -1, 1),
+    new Among(";", -1, 1),
+    new Among("?", -1, 1),
+    new Among("\\", -1, 1),
+    new Among("\u060C", -1, 1),
+    new Among("\u061B", -1, 1),
+    new Among("\u061F", -1, 1),
     new Among("\u0640", -1, 1),
+    new Among("\u0643", -1, 40),
     new Among("\u064B", -1, 1),
     new Among("\u064C", -1, 1),
     new Among("\u064D", -1, 1),
@@ -36,6 +50,10 @@ private final static Among a_0[] = {
     new Among("\u0667", -1, 9),
     new Among("\u0668", -1, 10),
     new Among("\u0669", -1, 11),
+    new Among("\u066A", -1, 1),
+    new Among("\u066B", -1, 1),
+    new Among("\u066C", -1, 1),
+    new Among("\u06CC", -1, 47),
     new Among("\uFE80", -1, 12),
     new Among("\uFE81", -1, 16),
     new Among("\uFE82", -1, 16),
@@ -187,6 +205,13 @@ private final static Among a_3[] = {
 };
 
 private final static Among a_4[] = {
+    new Among("\u0629", -1, 1),
+    new Among("\u0627\u062A", -1, 2),
+    new Among("\u062A\u0627\u0646", -1, 3),
+    new Among("\u062A\u064A\u0646", -1, 3)
+};
+
+private final static Among a_5[] = {
     new Among("\u0623\u0622", -1, 2),
     new Among("\u0623\u0623", -1, 1),
     new Among("\u0623\u0624", -1, 1),
@@ -194,38 +219,49 @@ private final static Among a_4[] = {
     new Among("\u0623\u0627", -1, 3)
 };
 
-private final static Among a_5[] = {
+private final static Among a_6[] = {
+    new Among("\u0641\u0627\u0644", -1, 1),
+    new Among("\u0648\u0627\u0644", -1, 1)
+};
+
+private final static Among a_7[] = {
     new Among("\u0641", -1, 1),
     new Among("\u0648", -1, 1)
 };
 
-private final static Among a_6[] = {
+private final static Among a_8[] = {
     new Among("\u0627\u0644", -1, 2),
     new Among("\u0628\u0627\u0644", -1, 1),
     new Among("\u0643\u0627\u0644", -1, 1),
     new Among("\u0644\u0644", -1, 2)
 };
 
-private final static Among a_7[] = {
+private final static Among a_9[] = {
     new Among("\u0628", -1, 1),
-    new Among("\u0628\u0628", 0, 2),
-    new Among("\u0643\u0643", -1, 3)
+    new Among("\u0628\u0628", 0, 3),
+    new Among("\u0643", -1, 2),
+    new Among("\u0643\u0643", 2, 4),
+    new Among("\u0644", -1, 2)
 };
 
-private final static Among a_8[] = {
+private final static Among a_10[] = {
+    new Among("\u0628", -1, 1)
+};
+
+private final static Among a_11[] = {
     new Among("\u0633\u0623", -1, 4),
     new Among("\u0633\u062A", -1, 2),
     new Among("\u0633\u0646", -1, 3),
     new Among("\u0633\u064A", -1, 1)
 };
 
-private final static Among a_9[] = {
+private final static Among a_12[] = {
     new Among("\u062A\u0633\u062A", -1, 1),
     new Among("\u0646\u0633\u062A", -1, 1),
     new Among("\u064A\u0633\u062A", -1, 1)
 };
 
-private final static Among a_10[] = {
+private final static Among a_13[] = {
     new Among("\u0643\u0645\u0627", -1, 3),
     new Among("\u0647\u0645\u0627", -1, 3),
     new Among("\u0646\u0627", -1, 2),
@@ -238,33 +274,35 @@ private final static Among a_10[] = {
     new Among("\u064A", -1, 1)
 };
 
-private final static Among a_11[] = {
+private final static Among a_14[] = {
     new Among("\u0646", -1, 1)
 };
 
-private final static Among a_12[] = {
+private final static Among a_15[] = {
     new Among("\u0627", -1, 1),
     new Among("\u0648", -1, 1),
     new Among("\u064A", -1, 1)
 };
 
-private final static Among a_13[] = {
+private final static Among a_16[] = {
     new Among("\u0627\u062A", -1, 1)
 };
 
-private final static Among a_14[] = {
+private final static Among a_17[] = {
     new Among("\u062A", -1, 1)
 };
 
-private final static Among a_15[] = {
-    new Among("\u0629", -1, 1)
+private final static Among a_18[] = {
+    new Among("\u0629", -1, 1),
+    new Among("\u062A\u0627\u0646", -1, 2),
+    new Among("\u062A\u064A\u0646", -1, 2)
 };
 
-private final static Among a_16[] = {
+private final static Among a_19[] = {
     new Among("\u064A", -1, 1)
 };
 
-private final static Among a_17[] = {
+private final static Among a_20[] = {
     new Among("\u0643\u0645\u0627", -1, 3),
     new Among("\u0647\u0645\u0627", -1, 3),
     new Among("\u0646\u0627", -1, 2),
@@ -279,31 +317,30 @@ private final static Among a_17[] = {
     new Among("\u0646\u064A", -1, 2)
 };
 
-private final static Among a_18[] = {
+private final static Among a_21[] = {
     new Among("\u0627", -1, 1),
     new Among("\u062A\u0627", 0, 2),
     new Among("\u062A\u0645\u0627", 0, 4),
     new Among("\u0646\u0627", 0, 2),
     new Among("\u062A", -1, 1),
-    new Among("\u0646", -1, 1),
-    new Among("\u0627\u0646", 5, 3),
-    new Among("\u062A\u0646", 5, 2),
-    new Among("\u0648\u0646", 5, 3),
-    new Among("\u064A\u0646", 5, 3),
+    new Among("\u0627\u0646", -1, 3),
+    new Among("\u062A\u0646", -1, 2),
+    new Among("\u0648\u0646", -1, 3),
+    new Among("\u064A\u0646", -1, 3),
     new Among("\u064A", -1, 1)
 };
 
-private final static Among a_19[] = {
+private final static Among a_22[] = {
     new Among("\u0648\u0627", -1, 1),
     new Among("\u062A\u0645", -1, 1)
 };
 
-private final static Among a_20[] = {
+private final static Among a_23[] = {
     new Among("\u0648", -1, 1),
     new Among("\u062A\u0645\u0648", 0, 2)
 };
 
-private final static Among a_21[] = {
+private final static Among a_24[] = {
     new Among("\u0649", -1, 1)
 };
 
@@ -598,10 +635,48 @@ private boolean r_Checks1() {
     return true;
 }
 
+private boolean r_Checks2() {
+    int among_var;
+    ket = cursor;
+    among_var = find_among_b(a_4);
+    if (among_var == 0)
+    {
+        return false;
+    }
+    bra = cursor;
+    switch (among_var) {
+        case 1:
+            if (!(current.length() > 2))
+            {
+                return false;
+            }
+            B_is_noun = true;
+            B_is_verb = false;
+            break;
+        case 2:
+            if (!(current.length() > 3))
+            {
+                return false;
+            }
+            B_is_noun = true;
+            B_is_verb = false;
+            break;
+        case 3:
+            if (!(current.length() >= 5))
+            {
+                return false;
+            }
+            B_is_noun = true;
+            B_is_verb = false;
+            break;
+    }
+    return true;
+}
+
 private boolean r_Prefix_Step1() {
     int among_var;
     bra = cursor;
-    among_var = find_among(a_4);
+    among_var = find_among(a_5);
     if (among_var == 0)
     {
         return false;
@@ -640,31 +715,24 @@ private boolean r_Prefix_Step1() {
     return true;
 }
 
-private boolean r_Prefix_Step2() {
-    {
-        int v_1 = cursor;
-        lab0: {
-            if (!(eq_s("\u0641\u0627")))
-            {
-                break lab0;
-            }
-            return false;
-        }
-        cursor = v_1;
-    }
-    {
-        int v_2 = cursor;
-        lab1: {
-            if (!(eq_s("\u0648\u0627")))
-            {
-                break lab1;
-            }
-            return false;
-        }
-        cursor = v_2;
-    }
+private boolean r_Prefix_Step2a() {
     bra = cursor;
-    if (find_among(a_5) == 0)
+    if (find_among(a_6) == 0)
+    {
+        return false;
+    }
+    ket = cursor;
+    if (!(current.length() > 5))
+    {
+        return false;
+    }
+    slice_del();
+    return true;
+}
+
+private boolean r_Prefix_Step2b() {
+    bra = cursor;
+    if (find_among(a_7) == 0)
     {
         return false;
     }
@@ -680,7 +748,7 @@ private boolean r_Prefix_Step2() {
 private boolean r_Prefix_Step3a_Noun() {
     int among_var;
     bra = cursor;
-    among_var = find_among(a_6);
+    among_var = find_among(a_8);
     if (among_var == 0)
     {
         return false;
@@ -719,7 +787,7 @@ private boolean r_Prefix_Step3b_Noun() {
         cursor = v_1;
     }
     bra = cursor;
-    among_var = find_among(a_7);
+    among_var = find_among(a_9);
     if (among_var == 0)
     {
         return false;
@@ -734,13 +802,20 @@ private boolean r_Prefix_Step3b_Noun() {
             slice_del();
             break;
         case 2:
+            if (!(current.length() > 4))
+            {
+                return false;
+            }
+            slice_del();
+            break;
+        case 3:
             if (!(current.length() > 3))
             {
                 return false;
             }
             slice_from("\u0628");
             break;
-        case 3:
+        case 4:
             if (!(current.length() > 3))
             {
                 return false;
@@ -751,10 +826,25 @@ private boolean r_Prefix_Step3b_Noun() {
     return true;
 }
 
+private boolean r_Prefix_Step3c_Noun() {
+    bra = cursor;
+    if (find_among(a_10) == 0)
+    {
+        return false;
+    }
+    ket = cursor;
+    if (!(current.length() > 4))
+    {
+        return false;
+    }
+    slice_del();
+    return true;
+}
+
 private boolean r_Prefix_Step3_Verb() {
     int among_var;
     bra = cursor;
-    among_var = find_among(a_8);
+    among_var = find_among(a_11);
     if (among_var == 0)
     {
         return false;
@@ -795,7 +885,7 @@ private boolean r_Prefix_Step3_Verb() {
 
 private boolean r_Prefix_Step4_Verb() {
     bra = cursor;
-    if (find_among(a_9) == 0)
+    if (find_among(a_12) == 0)
     {
         return false;
     }
@@ -813,7 +903,7 @@ private boolean r_Prefix_Step4_Verb() {
 private boolean r_Suffix_Noun_Step1a() {
     int among_var;
     ket = cursor;
-    among_var = find_among_b(a_10);
+    among_var = find_among_b(a_13);
     if (among_var == 0)
     {
         return false;
@@ -847,7 +937,7 @@ private boolean r_Suffix_Noun_Step1a() {
 
 private boolean r_Suffix_Noun_Step1b() {
     ket = cursor;
-    if (find_among_b(a_11) == 0)
+    if (find_among_b(a_14) == 0)
     {
         return false;
     }
@@ -862,7 +952,7 @@ private boolean r_Suffix_Noun_Step1b() {
 
 private boolean r_Suffix_Noun_Step2a() {
     ket = cursor;
-    if (find_among_b(a_12) == 0)
+    if (find_among_b(a_15) == 0)
     {
         return false;
     }
@@ -877,7 +967,7 @@ private boolean r_Suffix_Noun_Step2a() {
 
 private boolean r_Suffix_Noun_Step2b() {
     ket = cursor;
-    if (find_among_b(a_13) == 0)
+    if (find_among_b(a_16) == 0)
     {
         return false;
     }
@@ -892,7 +982,7 @@ private boolean r_Suffix_Noun_Step2b() {
 
 private boolean r_Suffix_Noun_Step2c1() {
     ket = cursor;
-    if (find_among_b(a_14) == 0)
+    if (find_among_b(a_17) == 0)
     {
         return false;
     }
@@ -906,23 +996,36 @@ private boolean r_Suffix_Noun_Step2c1() {
 }
 
 private boolean r_Suffix_Noun_Step2c2() {
+    int among_var;
     ket = cursor;
-    if (find_among_b(a_15) == 0)
+    among_var = find_among_b(a_18);
+    if (among_var == 0)
     {
         return false;
     }
     bra = cursor;
-    if (!(current.length() >= 4))
-    {
-        return false;
+    switch (among_var) {
+        case 1:
+            if (!(current.length() >= 3))
+            {
+                return false;
+            }
+            slice_del();
+            break;
+        case 2:
+            if (!(current.length() >= 5))
+            {
+                return false;
+            }
+            slice_del();
+            break;
     }
-    slice_del();
     return true;
 }
 
 private boolean r_Suffix_Noun_Step3() {
     ket = cursor;
-    if (find_among_b(a_16) == 0)
+    if (find_among_b(a_19) == 0)
     {
         return false;
     }
@@ -938,7 +1041,7 @@ private boolean r_Suffix_Noun_Step3() {
 private boolean r_Suffix_Verb_Step1() {
     int among_var;
     ket = cursor;
-    among_var = find_among_b(a_17);
+    among_var = find_among_b(a_20);
     if (among_var == 0)
     {
         return false;
@@ -973,7 +1076,7 @@ private boolean r_Suffix_Verb_Step1() {
 private boolean r_Suffix_Verb_Step2a() {
     int among_var;
     ket = cursor;
-    among_var = find_among_b(a_18);
+    among_var = find_among_b(a_21);
     if (among_var == 0)
     {
         return false;
@@ -1014,7 +1117,7 @@ private boolean r_Suffix_Verb_Step2a() {
 
 private boolean r_Suffix_Verb_Step2b() {
     ket = cursor;
-    if (find_among_b(a_19) == 0)
+    if (find_among_b(a_22) == 0)
     {
         return false;
     }
@@ -1030,7 +1133,7 @@ private boolean r_Suffix_Verb_Step2b() {
 private boolean r_Suffix_Verb_Step2c() {
     int among_var;
     ket = cursor;
-    among_var = find_among_b(a_20);
+    among_var = find_among_b(a_23);
     if (among_var == 0)
     {
         return false;
@@ -1057,7 +1160,7 @@ private boolean r_Suffix_Verb_Step2c() {
 
 private boolean r_Suffix_All_alef_maqsura() {
     ket = cursor;
-    if (find_among_b(a_21) == 0)
+    if (find_among_b(a_24) == 0)
     {
         return false;
     }
@@ -1073,276 +1176,305 @@ public boolean stem() {
     int v_1 = cursor;
     r_Checks1();
     cursor = v_1;
+    limit_backward = cursor;
+    cursor = limit;
+    int v_2 = limit - cursor;
+    r_Checks2();
+    cursor = limit - v_2;
+    cursor = limit_backward;
     r_Normalize_pre();
     limit_backward = cursor;
     cursor = limit;
-    int v_3 = limit - cursor;
+    int v_4 = limit - cursor;
     lab0: {
         lab1: {
-            int v_4 = limit - cursor;
+            int v_5 = limit - cursor;
             lab2: {
                 if (!(B_is_verb))
                 {
                     break lab2;
                 }
+                int v_6 = limit - cursor;
                 lab3: {
-                    int v_5 = limit - cursor;
                     lab4: {
-                        {
-                            int v_6 = 1;
-                            while(true)
+                        int v_7 = limit - cursor;
+                        lab5: {
                             {
-                                int v_7 = limit - cursor;
-                                lab5: {
-                                    if (!r_Suffix_Verb_Step1())
-                                    {
-                                        break lab5;
-                                    }
-                                    v_6--;
-                                    continue;
-                                }
-                                cursor = limit - v_7;
-                                break;
-                            }
-                            if (v_6 > 0)
-                            {
-                                break lab4;
-                            }
-                        }
-                        lab6: {
-                            int v_8 = limit - cursor;
-                            lab7: {
-                                if (!r_Suffix_Verb_Step2a())
+                                int v_8 = 1;
+                                while(true)
                                 {
+                                    int v_9 = limit - cursor;
+                                    lab6: {
+                                        if (!r_Suffix_Verb_Step1())
+                                        {
+                                            break lab6;
+                                        }
+                                        v_8--;
+                                        continue;
+                                    }
+                                    cursor = limit - v_9;
+                                    break;
+                                }
+                                if (v_8 > 0)
+                                {
+                                    break lab5;
+                                }
+                            }
+                            lab7: {
+                                int v_10 = limit - cursor;
+                                lab8: {
+                                    if (!r_Suffix_Verb_Step2a())
+                                    {
+                                        break lab8;
+                                    }
                                     break lab7;
                                 }
-                                break lab6;
-                            }
-                            cursor = limit - v_8;
-                            lab8: {
-                                if (!r_Suffix_Verb_Step2c())
-                                {
-                                    break lab8;
+                                cursor = limit - v_10;
+                                lab9: {
+                                    if (!r_Suffix_Verb_Step2c())
+                                    {
+                                        break lab9;
+                                    }
+                                    break lab7;
                                 }
-                                break lab6;
+                                cursor = limit - v_10;
+                                if (cursor <= limit_backward)
+                                {
+                                    break lab5;
+                                }
+                                cursor--;
                             }
-                            cursor = limit - v_8;
-                            if (cursor <= limit_backward)
+                            break lab4;
+                        }
+                        cursor = limit - v_7;
+                        lab10: {
+                            if (!r_Suffix_Verb_Step2b())
                             {
-                                break lab4;
+                                break lab10;
                             }
-                            cursor--;
+                            break lab4;
                         }
-                        break lab3;
-                    }
-                    cursor = limit - v_5;
-                    lab9: {
-                        if (!r_Suffix_Verb_Step2b())
+                        cursor = limit - v_7;
+                        if (!r_Suffix_Verb_Step2a())
                         {
-                            break lab9;
+                            cursor = limit - v_6;
+                            break lab3;
                         }
-                        break lab3;
-                    }
-                    cursor = limit - v_5;
-                    if (!r_Suffix_Verb_Step2a())
-                    {
-                        break lab2;
                     }
                 }
                 break lab1;
             }
-            cursor = limit - v_4;
-            lab10: {
+            cursor = limit - v_5;
+            lab11: {
                 if (!(B_is_noun))
                 {
-                    break lab10;
+                    break lab11;
                 }
-                int v_9 = limit - cursor;
-                lab11: {
-                    lab12: {
-                        int v_10 = limit - cursor;
-                        lab13: {
+                int v_11 = limit - cursor;
+                lab12: {
+                    lab13: {
+                        int v_12 = limit - cursor;
+                        lab14: {
                             if (!r_Suffix_Noun_Step2c2())
                             {
-                                break lab13;
+                                break lab14;
                             }
-                            break lab12;
+                            break lab13;
                         }
-                        cursor = limit - v_10;
-                        lab14: {
-                            lab15: {
+                        cursor = limit - v_12;
+                        lab15: {
+                            lab16: {
                                 if (!(B_is_defined))
                                 {
-                                    break lab15;
+                                    break lab16;
                                 }
-                                break lab14;
+                                break lab15;
                             }
                             if (!r_Suffix_Noun_Step1a())
                             {
-                                break lab14;
+                                break lab15;
                             }
-                            lab16: {
-                                int v_12 = limit - cursor;
-                                lab17: {
-                                    if (!r_Suffix_Noun_Step2a())
-                                    {
-                                        break lab17;
-                                    }
-                                    break lab16;
-                                }
-                                cursor = limit - v_12;
+                            lab17: {
+                                int v_14 = limit - cursor;
                                 lab18: {
-                                    if (!r_Suffix_Noun_Step2b())
+                                    if (!r_Suffix_Noun_Step2a())
                                     {
                                         break lab18;
                                     }
-                                    break lab16;
+                                    break lab17;
                                 }
-                                cursor = limit - v_12;
+                                cursor = limit - v_14;
                                 lab19: {
-                                    if (!r_Suffix_Noun_Step2c1())
+                                    if (!r_Suffix_Noun_Step2b())
                                     {
                                         break lab19;
                                     }
-                                    break lab16;
+                                    break lab17;
                                 }
-                                cursor = limit - v_12;
+                                cursor = limit - v_14;
+                                lab20: {
+                                    if (!r_Suffix_Noun_Step2c1())
+                                    {
+                                        break lab20;
+                                    }
+                                    break lab17;
+                                }
+                                cursor = limit - v_14;
                                 if (cursor <= limit_backward)
                                 {
-                                    break lab14;
+                                    break lab15;
                                 }
                                 cursor--;
                             }
-                            break lab12;
+                            break lab13;
                         }
-                        cursor = limit - v_10;
-                        lab20: {
+                        cursor = limit - v_12;
+                        lab21: {
                             if (!r_Suffix_Noun_Step1b())
                             {
-                                break lab20;
+                                break lab21;
                             }
-                            lab21: {
-                                int v_13 = limit - cursor;
-                                lab22: {
-                                    if (!r_Suffix_Noun_Step2a())
-                                    {
-                                        break lab22;
-                                    }
-                                    break lab21;
-                                }
-                                cursor = limit - v_13;
+                            lab22: {
+                                int v_15 = limit - cursor;
                                 lab23: {
-                                    if (!r_Suffix_Noun_Step2b())
+                                    if (!r_Suffix_Noun_Step2a())
                                     {
                                         break lab23;
                                     }
-                                    break lab21;
+                                    break lab22;
                                 }
-                                cursor = limit - v_13;
+                                cursor = limit - v_15;
+                                lab24: {
+                                    if (!r_Suffix_Noun_Step2b())
+                                    {
+                                        break lab24;
+                                    }
+                                    break lab22;
+                                }
+                                cursor = limit - v_15;
                                 if (!r_Suffix_Noun_Step2c1())
                                 {
-                                    break lab20;
+                                    break lab21;
                                 }
                             }
-                            break lab12;
+                            break lab13;
                         }
-                        cursor = limit - v_10;
-                        lab24: {
-                            lab25: {
+                        cursor = limit - v_12;
+                        lab25: {
+                            lab26: {
                                 if (!(B_is_defined))
                                 {
-                                    break lab25;
+                                    break lab26;
                                 }
-                                break lab24;
+                                break lab25;
                             }
                             if (!r_Suffix_Noun_Step2a())
                             {
-                                break lab24;
+                                break lab25;
                             }
-                            break lab12;
+                            break lab13;
                         }
-                        cursor = limit - v_10;
+                        cursor = limit - v_12;
                         if (!r_Suffix_Noun_Step2b())
                         {
-                            cursor = limit - v_9;
-                            break lab11;
+                            cursor = limit - v_11;
+                            break lab12;
                         }
                     }
                 }
                 if (!r_Suffix_Noun_Step3())
                 {
-                    break lab10;
+                    break lab11;
                 }
                 break lab1;
             }
-            cursor = limit - v_4;
+            cursor = limit - v_5;
             if (!r_Suffix_All_alef_maqsura())
             {
                 break lab0;
             }
         }
     }
-    cursor = limit - v_3;
+    cursor = limit - v_4;
     cursor = limit_backward;
-    int v_15 = cursor;
-    lab26: {
-        int v_16 = cursor;
-        lab27: {
+    int v_17 = cursor;
+    lab27: {
+        int v_18 = cursor;
+        lab28: {
             if (!r_Prefix_Step1())
             {
-                cursor = v_16;
-                break lab27;
-            }
-        }
-        int v_17 = cursor;
-        lab28: {
-            if (!r_Prefix_Step2())
-            {
-                cursor = v_17;
+                cursor = v_18;
                 break lab28;
             }
         }
+        int v_19 = cursor;
         lab29: {
-            int v_18 = cursor;
             lab30: {
-                if (!r_Prefix_Step3a_Noun())
-                {
+                int v_20 = cursor;
+                lab31: {
+                    if (!r_Prefix_Step2a())
+                    {
+                        break lab31;
+                    }
                     break lab30;
                 }
-                break lab29;
-            }
-            cursor = v_18;
-            lab31: {
-                if (!(B_is_noun))
-                {
-                    break lab31;
-                }
-                if (!r_Prefix_Step3b_Noun())
-                {
-                    break lab31;
-                }
-                break lab29;
-            }
-            cursor = v_18;
-            if (!(B_is_verb))
-            {
-                break lab26;
-            }
-            int v_19 = cursor;
-            lab32: {
-                if (!r_Prefix_Step3_Verb())
+                cursor = v_20;
+                if (!r_Prefix_Step2b())
                 {
                     cursor = v_19;
-                    break lab32;
+                    break lab29;
+                }
+            }
+        }
+        lab32: {
+            int v_21 = cursor;
+            lab33: {
+                if (!r_Prefix_Step3a_Noun())
+                {
+                    break lab33;
+                }
+                break lab32;
+            }
+            cursor = v_21;
+            lab34: {
+                if (!(B_is_noun))
+                {
+                    break lab34;
+                }
+                int v_22 = cursor;
+                lab35: {
+                    if (!r_Prefix_Step3b_Noun())
+                    {
+                        cursor = v_22;
+                        break lab35;
+                    }
+                }
+                if (!r_Prefix_Step3c_Noun())
+                {
+                    break lab34;
+                }
+                break lab32;
+            }
+            cursor = v_21;
+            if (!(B_is_verb))
+            {
+                break lab27;
+            }
+            int v_23 = cursor;
+            lab36: {
+                if (!r_Prefix_Step3_Verb())
+                {
+                    cursor = v_23;
+                    break lab36;
                 }
             }
             if (!r_Prefix_Step4_Verb())
             {
-                break lab26;
+                break lab27;
             }
         }
     }
-    cursor = v_15;
+    cursor = v_17;
     r_Normalize_post();
     return true;
 }
